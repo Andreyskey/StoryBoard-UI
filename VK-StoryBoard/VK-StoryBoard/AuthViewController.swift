@@ -16,8 +16,14 @@ class AuthViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Отступ для текста внутри TextField
         login.indent(size: 10)
         password.indent(size: 10)
+        
+        // Цвет рамок TextField
+        login.layer.borderColor = #colorLiteral(red: 1, green: 0.3200579286, blue: 0.335835427, alpha: 1)
+        password.layer.borderColor = #colorLiteral(red: 1, green: 0.3200579286, blue: 0.335835427, alpha: 1)
         
         let hideKeyboardGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
         scrollView?.addGestureRecognizer(hideKeyboardGesture) // Добавляем размер клавиатуры в  констрейнт скроллвью
@@ -25,6 +31,15 @@ class AuthViewController: UIViewController {
     
     // Метод проверки пароля и логина
     @IBAction func signIn(_ sender: Any) {
+        if login.text == "admin" && password.text == "admin" {
+            login.layer.borderWidth = 0
+            password.layer.borderWidth = 0
+            performSegue(withIdentifier: "succesLoginAndPassword", sender: nil)
+        } else {
+            // Если данные введены не верно, то появляется красная рамка
+            login.layer.borderWidth = 1
+            password.layer.borderWidth = 1
+        }
     }
     
 // MARK: - Клавиатура
