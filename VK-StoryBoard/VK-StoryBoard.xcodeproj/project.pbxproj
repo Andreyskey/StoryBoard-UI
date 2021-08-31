@@ -13,6 +13,16 @@
 		BA23017D26DD5CB80084F70F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA23017B26DD5CB80084F70F /* Main.storyboard */; };
 		BA23017F26DD5CC80084F70F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA23017E26DD5CC80084F70F /* Assets.xcassets */; };
 		BA23018226DD5CC80084F70F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA23018026DD5CC80084F70F /* LaunchScreen.storyboard */; };
+		BACA4EFF26DD7FBA00E4D795 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACA4EFD26DD7FBA00E4D795 /* TableViewCell.swift */; };
+		BACA4F0026DD7FBA00E4D795 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BACA4EFE26DD7FBA00E4D795 /* TableViewCell.xib */; };
+		BACA4F0526DD86B400E4D795 /* GroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACA4F0426DD86B400E4D795 /* GroupsViewController.swift */; };
+		BACA4F0926DD8D1200E4D795 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACA4F0726DD8D1200E4D795 /* CustomCollectionViewCell.swift */; };
+		BACA4F0A26DD8D1200E4D795 /* CustomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BACA4F0826DD8D1200E4D795 /* CustomCollectionViewCell.xib */; };
+		BACA4F0D26DD913400E4D795 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACA4F0C26DD913400E4D795 /* User.swift */; };
+		BACA4F0F26DD91A300E4D795 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACA4F0E26DD91A300E4D795 /* Group.swift */; };
+		BACA4F1126DD979E00E4D795 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACA4F1026DD979E00E4D795 /* SearchViewController.swift */; };
+		BACA4F1426DDA7D200E4D795 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACA4F1326DDA7D200E4D795 /* FriendsViewController.swift */; };
+		BACA4F1626DDA7DC00E4D795 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACA4F1526DDA7DC00E4D795 /* PhotosViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +34,16 @@
 		BA23017E26DD5CC80084F70F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA23018126DD5CC80084F70F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA23018326DD5CC80084F70F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BACA4EFD26DD7FBA00E4D795 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		BACA4EFE26DD7FBA00E4D795 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		BACA4F0426DD86B400E4D795 /* GroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsViewController.swift; sourceTree = "<group>"; };
+		BACA4F0726DD8D1200E4D795 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
+		BACA4F0826DD8D1200E4D795 /* CustomCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCollectionViewCell.xib; sourceTree = "<group>"; };
+		BACA4F0C26DD913400E4D795 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		BACA4F0E26DD91A300E4D795 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		BACA4F1026DD979E00E4D795 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		BACA4F1326DDA7D200E4D795 /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
+		BACA4F1526DDA7DC00E4D795 /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +76,73 @@
 		BA23017426DD5CB80084F70F /* VK-StoryBoard */ = {
 			isa = PBXGroup;
 			children = (
+				BACA4F1226DDA7B600E4D795 /* FriendsViewController */,
+				BACA4F0B26DD912100E4D795 /* Model */,
+				BACA4F0626DD8CE800E4D795 /* CollectionViewCell */,
+				BACA4F0326DD863F00E4D795 /* TableViewCell */,
+				BACA4F0226DD862600E4D795 /* GroupsViewController */,
+				BACA4F0126DD861B00E4D795 /* Auth */,
 				BA23017526DD5CB80084F70F /* AppDelegate.swift */,
 				BA23017726DD5CB80084F70F /* SceneDelegate.swift */,
-				BA23017926DD5CB80084F70F /* AuthViewController.swift */,
 				BA23017B26DD5CB80084F70F /* Main.storyboard */,
 				BA23017E26DD5CC80084F70F /* Assets.xcassets */,
 				BA23018026DD5CC80084F70F /* LaunchScreen.storyboard */,
 				BA23018326DD5CC80084F70F /* Info.plist */,
 			);
 			path = "VK-StoryBoard";
+			sourceTree = "<group>";
+		};
+		BACA4F0126DD861B00E4D795 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				BA23017926DD5CB80084F70F /* AuthViewController.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		BACA4F0226DD862600E4D795 /* GroupsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BACA4F0426DD86B400E4D795 /* GroupsViewController.swift */,
+				BACA4F1026DD979E00E4D795 /* SearchViewController.swift */,
+			);
+			path = GroupsViewController;
+			sourceTree = "<group>";
+		};
+		BACA4F0326DD863F00E4D795 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				BACA4EFD26DD7FBA00E4D795 /* TableViewCell.swift */,
+				BACA4EFE26DD7FBA00E4D795 /* TableViewCell.xib */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		BACA4F0626DD8CE800E4D795 /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				BACA4F0726DD8D1200E4D795 /* CustomCollectionViewCell.swift */,
+				BACA4F0826DD8D1200E4D795 /* CustomCollectionViewCell.xib */,
+			);
+			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
+		BACA4F0B26DD912100E4D795 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BACA4F0C26DD913400E4D795 /* User.swift */,
+				BACA4F0E26DD91A300E4D795 /* Group.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BACA4F1226DDA7B600E4D795 /* FriendsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BACA4F1326DDA7D200E4D795 /* FriendsViewController.swift */,
+				BACA4F1526DDA7DC00E4D795 /* PhotosViewController.swift */,
+			);
+			path = FriendsViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,7 +203,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA23018226DD5CC80084F70F /* LaunchScreen.storyboard in Resources */,
+				BACA4F0026DD7FBA00E4D795 /* TableViewCell.xib in Resources */,
 				BA23017F26DD5CC80084F70F /* Assets.xcassets in Resources */,
+				BACA4F0A26DD8D1200E4D795 /* CustomCollectionViewCell.xib in Resources */,
 				BA23017D26DD5CB80084F70F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,8 +218,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA23017A26DD5CB80084F70F /* AuthViewController.swift in Sources */,
+				BACA4F1626DDA7DC00E4D795 /* PhotosViewController.swift in Sources */,
+				BACA4F0926DD8D1200E4D795 /* CustomCollectionViewCell.swift in Sources */,
+				BACA4EFF26DD7FBA00E4D795 /* TableViewCell.swift in Sources */,
+				BACA4F1126DD979E00E4D795 /* SearchViewController.swift in Sources */,
+				BACA4F0F26DD91A300E4D795 /* Group.swift in Sources */,
 				BA23017626DD5CB80084F70F /* AppDelegate.swift in Sources */,
+				BACA4F1426DDA7D200E4D795 /* FriendsViewController.swift in Sources */,
 				BA23017826DD5CB80084F70F /* SceneDelegate.swift in Sources */,
+				BACA4F0526DD86B400E4D795 /* GroupsViewController.swift in Sources */,
+				BACA4F0D26DD913400E4D795 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
