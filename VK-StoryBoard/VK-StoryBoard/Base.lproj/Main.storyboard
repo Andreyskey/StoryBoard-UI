@@ -117,7 +117,7 @@
         <!--Groups-->
         <scene sceneID="iW9-N4-Z34">
             <objects>
-                <viewController id="pV5-qK-DWq" sceneMemberID="viewController">
+                <viewController id="pV5-qK-DWq" customClass="GroupsViewController" customModule="VK_StoryBoard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vxo-0e-swl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -143,6 +143,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="qt3-pQ-Hsu" id="nTi-gi-1Qs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oSw-uQ-j9Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -151,7 +154,7 @@
         <!--Friends-->
         <scene sceneID="c4K-l0-84g">
             <objects>
-                <viewController id="Kha-hj-maY" sceneMemberID="viewController">
+                <viewController id="Kha-hj-maY" customClass="FriendsViewController" customModule="VK_StoryBoard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="s9x-w7-YBd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -172,7 +175,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="Friends" id="9JY-Mo-Ffi"/>
                     <connections>
-                        <segue destination="A0P-Fm-Npq" kind="show" id="aC3-Fx-k8m"/>
+                        <outlet property="tableVIew" destination="V9l-wL-51b" id="4yV-jS-IAO"/>
+                        <segue destination="A0P-Fm-Npq" kind="show" identifier="showPhotos" id="aC3-Fx-k8m"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9B1-sq-7tc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -182,7 +186,7 @@
         <!--Photos-->
         <scene sceneID="xcD-m4-KFK">
             <objects>
-                <viewController id="A0P-Fm-Npq" sceneMemberID="viewController">
+                <viewController id="A0P-Fm-Npq" customClass="PhotosViewController" customModule="VK_StoryBoard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FFS-di-seX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -218,6 +222,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Photos" id="cve-Ax-cQQ"/>
+                    <connections>
+                        <outlet property="collectionView" destination="TxQ-cZ-LtY" id="sNz-ZU-gND"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vh4-GA-c4w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -226,7 +233,7 @@
         <!--Search-->
         <scene sceneID="wGs-og-P8f">
             <objects>
-                <viewController id="ytD-wF-lbJ" sceneMemberID="viewController">
+                <viewController id="ytD-wF-lbJ" customClass="SearchViewController" customModule="VK_StoryBoard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hbB-b7-2Qn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -246,8 +253,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Search" id="TP6-wz-BwZ"/>
+                    <connections>
+                        <outlet property="tableView" destination="TNI-zT-77f" id="imk-pt-ECN"/>
+                        <segue destination="M2e-Cy-a3g" kind="unwind" identifier="addGroup" unwindAction="selectGroupWithSegue:" id="qP1-vs-nV4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bTd-XJ-Hat" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="M2e-Cy-a3g" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3377" y="404"/>
         </scene>
