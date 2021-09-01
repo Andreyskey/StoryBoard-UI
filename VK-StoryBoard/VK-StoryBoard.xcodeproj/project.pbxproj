@@ -23,6 +23,9 @@
 		BACA4F1126DD979E00E4D795 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACA4F1026DD979E00E4D795 /* SearchViewController.swift */; };
 		BACA4F1426DDA7D200E4D795 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACA4F1326DDA7D200E4D795 /* FriendsViewController.swift */; };
 		BACA4F1626DDA7DC00E4D795 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACA4F1526DDA7DC00E4D795 /* PhotosViewController.swift */; };
+		BACA4F1C26DFEAD000E4D795 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACA4F1B26DFEAD000E4D795 /* NewsViewController.swift */; };
+		BACA4F1E26DFEBB000E4D795 /* PostNewsfeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACA4F1D26DFEBB000E4D795 /* PostNewsfeed.swift */; };
+		BACA4F2026DFED4200E4D795 /* CustomControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACA4F1F26DFED4200E4D795 /* CustomControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +47,9 @@
 		BACA4F1026DD979E00E4D795 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		BACA4F1326DDA7D200E4D795 /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 		BACA4F1526DDA7DC00E4D795 /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
+		BACA4F1B26DFEAD000E4D795 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		BACA4F1D26DFEBB000E4D795 /* PostNewsfeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostNewsfeed.swift; sourceTree = "<group>"; };
+		BACA4F1F26DFED4200E4D795 /* CustomControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +82,7 @@
 		BA23017426DD5CB80084F70F /* VK-StoryBoard */ = {
 			isa = PBXGroup;
 			children = (
+				BACA4F1A26DFEAB700E4D795 /* NewsViewController */,
 				BACA4F1226DDA7B600E4D795 /* FriendsViewController */,
 				BACA4F0B26DD912100E4D795 /* Model */,
 				BACA4F0626DD8CE800E4D795 /* CollectionViewCell */,
@@ -88,6 +95,7 @@
 				BA23017E26DD5CC80084F70F /* Assets.xcassets */,
 				BA23018026DD5CC80084F70F /* LaunchScreen.storyboard */,
 				BA23018326DD5CC80084F70F /* Info.plist */,
+				BACA4F1F26DFED4200E4D795 /* CustomControl.swift */,
 			);
 			path = "VK-StoryBoard";
 			sourceTree = "<group>";
@@ -132,6 +140,7 @@
 			children = (
 				BACA4F0C26DD913400E4D795 /* User.swift */,
 				BACA4F0E26DD91A300E4D795 /* Group.swift */,
+				BACA4F1D26DFEBB000E4D795 /* PostNewsfeed.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -143,6 +152,14 @@
 				BACA4F1526DDA7DC00E4D795 /* PhotosViewController.swift */,
 			);
 			path = FriendsViewController;
+			sourceTree = "<group>";
+		};
+		BACA4F1A26DFEAB700E4D795 /* NewsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BACA4F1B26DFEAD000E4D795 /* NewsViewController.swift */,
+			);
+			path = NewsViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,8 +237,11 @@
 				BA23017A26DD5CB80084F70F /* AuthViewController.swift in Sources */,
 				BACA4F1626DDA7DC00E4D795 /* PhotosViewController.swift in Sources */,
 				BACA4F0926DD8D1200E4D795 /* CustomCollectionViewCell.swift in Sources */,
+				BACA4F1C26DFEAD000E4D795 /* NewsViewController.swift in Sources */,
+				BACA4F2026DFED4200E4D795 /* CustomControl.swift in Sources */,
 				BACA4EFF26DD7FBA00E4D795 /* TableViewCell.swift in Sources */,
 				BACA4F1126DD979E00E4D795 /* SearchViewController.swift in Sources */,
+				BACA4F1E26DFEBB000E4D795 /* PostNewsfeed.swift in Sources */,
 				BACA4F0F26DD91A300E4D795 /* Group.swift in Sources */,
 				BA23017626DD5CB80084F70F /* AppDelegate.swift in Sources */,
 				BACA4F1426DDA7D200E4D795 /* FriendsViewController.swift in Sources */,
