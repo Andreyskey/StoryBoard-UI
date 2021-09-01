@@ -11,8 +11,10 @@ class PhotosViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
+    // Идентификатор контроллера
     var photosViewControllerIdentifier = "photosViewControllerIdentifier"
     
+    // Переменная для передачи данных о друге пользователя
     var friend: User!
     
     override func viewDidLoad() {
@@ -20,6 +22,7 @@ class PhotosViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         
+        // Регситрация ячейки
         collectionView.register(UINib(nibName: "CustomCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: photosViewControllerIdentifier)
     }
     
@@ -27,10 +30,12 @@ class PhotosViewController: UIViewController {
 
 extension PhotosViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
+    // Количество ячеек
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 1
     }
     
+    // Создание ячейни
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: photosViewControllerIdentifier, for: indexPath) as? CustomCollectionViewCell
         else { return CustomCollectionViewCell() }

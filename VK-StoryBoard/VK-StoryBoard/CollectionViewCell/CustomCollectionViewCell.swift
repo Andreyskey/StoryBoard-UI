@@ -21,6 +21,7 @@ class CustomCollectionViewCell: UICollectionViewCell {
         photo.image = nil
     }
     
+    // Подготовка к переиспользованию ячейки
     override func prepareForReuse() {
         clearCell()
     }
@@ -32,6 +33,7 @@ class CustomCollectionViewCell: UICollectionViewCell {
         }
     }
     
+    // Создание ячейки
     override func awakeFromNib() {
         super.awakeFromNib()
         setup()

@@ -276,11 +276,43 @@
                     <connections>
                         <segue destination="2pm-MZ-C2I" kind="relationship" relationship="viewControllers" id="dat-AM-uey"/>
                         <segue destination="162-d2-tNS" kind="relationship" relationship="viewControllers" id="KsS-jf-JTJ"/>
+                        <segue destination="tjz-t6-o7v" kind="relationship" relationship="viewControllers" id="eKE-rU-jyL"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J7u-1h-VBQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="829" y="94"/>
+        </scene>
+        <!--News-->
+        <scene sceneID="mxB-Jm-jo7">
+            <objects>
+                <viewController id="YCc-NI-FRD" customClass="NewsViewController" customModule="VK_StoryBoard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tdg-ro-PtH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="g25-sP-uih">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qbr-Io-nrv"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="g25-sP-uih" firstAttribute="leading" secondItem="qbr-Io-nrv" secondAttribute="leading" id="VP6-QL-fba"/>
+                            <constraint firstItem="qbr-Io-nrv" firstAttribute="bottom" secondItem="g25-sP-uih" secondAttribute="bottom" id="quO-O3-F8m"/>
+                            <constraint firstItem="qbr-Io-nrv" firstAttribute="trailing" secondItem="g25-sP-uih" secondAttribute="trailing" id="t7j-BD-rQr"/>
+                            <constraint firstItem="g25-sP-uih" firstAttribute="top" secondItem="qbr-Io-nrv" secondAttribute="top" id="uUj-SM-9cE"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="News" id="neI-gy-qVM"/>
+                    <connections>
+                        <outlet property="tableView" destination="g25-sP-uih" id="eNa-op-DM8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cxd-t2-RE0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2513.04347826087" y="-949.55357142857133"/>
         </scene>
         <!--Friends-->
         <scene sceneID="Cov-9o-LD1">
@@ -320,10 +352,30 @@
             </objects>
             <point key="canvasLocation" x="1602.8985507246377" y="403.79464285714283"/>
         </scene>
+        <!--News-->
+        <scene sceneID="hrw-kL-WZ3">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tjz-t6-o7v" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="News" image="newspaper.fill" catalog="system" id="U6V-2M-KkY"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PAI-fC-Oyl">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="YCc-NI-FRD" kind="relationship" relationship="rootViewController" id="yBx-8E-7MM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="13d-Z3-st5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1602.8985507246377" y="-949.55357142857133"/>
+        </scene>
     </scenes>
     <resources>
         <image name="VK.com-logo.svg" width="2048" height="2048"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="newspaper.fill" catalog="system" width="128" height="111"/>
         <image name="person.2.fill" catalog="system" width="128" height="80"/>
         <image name="person.3.fill" catalog="system" width="128" height="61"/>
         <systemColor name="systemBackgroundColor">
