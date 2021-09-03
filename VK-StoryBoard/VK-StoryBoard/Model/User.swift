@@ -8,6 +8,8 @@
 import UIKit
 
 struct User {
-    var name: String?
-    var photo: String?
+    var name: String? // Полное имя
+    var photo: [String]? // Массив фотографий
+    var date: String? // Дата рожденя
+    var isFrom: String? // Откуда пользователь
 }

@@ -10,6 +10,7 @@ import UIKit
 class GroupsViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var noGroup: UILabel!
     
     // Идентификатор контроллера
     let groupsViewControllerIdentifier = "groupsViewControllerIdentifier"
@@ -24,6 +25,9 @@ class GroupsViewController: UIViewController {
         
         // Регистрация ячейки
         tableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: groupsViewControllerIdentifier)
+        
+        // Убирает лишние разделения ячеек
+        self.tableView.tableFooterView = UIView()
     }
     
     @IBAction func selectGroup(segue: UIStoryboardSegue) {
@@ -36,7 +40,10 @@ class GroupsViewController: UIViewController {
                     if item.name == group.name && item.photoProfile == group.photoProfile { return } // проверяем на повторение ячеек
                 }
                 groups.append(group) // Добавляем в массив
-                tableView.reloadData() // Подгружаем новые данные на контроллер
+                
+                noGroup.isHidden = true // Скрываем текст об отсутствии групп
+                
+                tableView.reloadData() // Подгружаем новые данные на tableView
             }
         }
         
@@ -59,16 +66,22 @@ extension GroupsViewController: UITableViewDelegate, UITableViewDataSource {
         
         let group = groups[indexPath.row] // Получаем группу из индекса ячейки
         
-        cell.configurate(name: group.name, imgProfile: UIImage(named: group.photoProfile ?? "default")) // Конфигурируем ячейку
+        cell.configurate(name: group.name, imgProfile: UIImage(named: group.photoProfile ?? "default"), description: group.topicGroup) // Конфигурируем ячейку
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             groups.remove(at: indexPath.row) // Удаляем из массива группу под индексом ячейки
             tableView.deleteRows(at: [indexPath], with: .fade) // Удаляем ячейку с анимацией
+            
+            if groups.count > 0 { noGroup.isHidden = true }
+            else { noGroup.isHidden = false }
         }
     }
-    
 }
