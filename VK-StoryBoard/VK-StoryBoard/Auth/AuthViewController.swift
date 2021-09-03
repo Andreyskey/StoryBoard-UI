@@ -42,6 +42,12 @@ class AuthViewController: UIViewController {
         }
     }
     
+    @IBAction func exit(segue: UIStoryboardSegue) {
+        login.text = nil
+        password.text = nil
+    }
+    
+    
 // MARK: - Клавиатура
     
     @objc func keyboardWasShown(notification: Notification) {

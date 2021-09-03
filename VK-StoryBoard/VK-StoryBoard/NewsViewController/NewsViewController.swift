@@ -16,7 +16,7 @@ class NewsViewController: UIViewController {
 //        tableView.delegate = self
 //        tableView.dataSource = self
         
-        
+        self.tableView.tableFooterView = UIView()
     }
 
 }

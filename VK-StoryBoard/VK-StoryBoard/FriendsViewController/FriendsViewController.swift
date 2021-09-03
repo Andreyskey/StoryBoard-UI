@@ -16,10 +16,30 @@ class FriendsViewController: UIViewController {
     
     // Массив с друзьями пользователя
     var friends = [
-        User(name: "Tim Cook", photo: "tim1"),
-        User(name: "Steve Jobs", photo: "steve"),
-        User(name: "Pavel Durov", photo: "pavel"),
-        User(name: "Donald Trump", photo: "trump"),
+        User(name: "Tim Cook", photo: [
+            "tim1",
+            "tim2",
+            "tim3",
+            "tim4"
+        ], isFrom: "USA, Cupertino"),
+        User(name: "Steve Jobs", photo: [
+            "steve",
+            "steve2",
+            "steve3",
+            "steve4"
+        ], isFrom: "USA, California"),
+        User(name: "Pavel Durov", photo: [
+            "pavel",
+            "pavel2",
+            "pavel3",
+            "pavel4"
+        ], isFrom: "Russia, St. Petersburg"),
+        User(name: "Donald Trump", photo: [
+            "trump",
+            "trump2",
+            "trump3",
+            "trump4"
+        ], isFrom: "USA, Washington"),
         User(name: "No name", photo: nil)
     ]
     
@@ -27,6 +47,8 @@ class FriendsViewController: UIViewController {
         super.viewDidLoad()
         tableVIew.dataSource = self
         tableVIew.delegate = self
+        
+        self.tableVIew.tableFooterView = UIView()
         
         // Регистрация ячейки
         tableVIew.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: friendsViewControllerIdentifier)
@@ -53,7 +75,7 @@ extension FriendsViewController: UITableViewDelegate, UITableViewDataSource {
         
         let friend = friends[indexPath.row]
         
-        cell.configurate(name: friend.name, imgProfile: UIImage(named: friend.photo ?? "default"))
+        cell.configurate(name: friend.name, imgProfile: UIImage(named: friend.photo?[0] ?? "default"), description: friend.isFrom)
         
         return cell
     }
@@ -61,8 +83,12 @@ extension FriendsViewController: UITableViewDelegate, UITableViewDataSource {
     // Переход по конкретной сеге при нажатии на ячейку
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "showPhotos", sender: indexPath)
+        
+        // Убираем анимацию нажатия
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
+    // Передаем данные при переходе на другой контроллер
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? PhotosViewController {
             let indexPath = sender as! IndexPath

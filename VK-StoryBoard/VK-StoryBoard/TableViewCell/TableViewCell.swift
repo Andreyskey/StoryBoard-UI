@@ -16,9 +16,12 @@ class TableViewCell: UITableViewCell {
     @IBOutlet weak var imageProfile: UIImageView!
     @IBOutlet weak var nameProfile: UILabel!
     
+    // Описание
+    @IBOutlet weak var descrip: UILabel!
+    
     // Добавляем возможность кастомизации через Interface Builder
-    @IBInspectable var shadowOffset: CGSize = CGSize(width: 2, height: 2)
-    @IBInspectable var shadowRadius: CGFloat = 2
+    @IBInspectable var shadowOffset: CGSize = CGSize(width: 0, height: 0)
+    @IBInspectable var shadowRadius: CGFloat = 0
     @IBInspectable var opacity: CGFloat = 0.5
     
     // Создание ячейки
@@ -47,11 +50,13 @@ class TableViewCell: UITableViewCell {
     }
     
     // Конфигурация ячейки
-    func configurate(name: String?, imgProfile: UIImage?) {
+    func configurate(name: String?, imgProfile: UIImage?, description: String?) {
         if let profileName = name {
             nameProfile.text = profileName
         }
-            
+         
+        descrip.text = description ?? ""
+        
         imageProfile.image = imgProfile
     }
 }

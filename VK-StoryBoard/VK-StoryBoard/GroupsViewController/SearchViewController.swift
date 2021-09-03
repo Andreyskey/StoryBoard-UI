@@ -16,16 +16,16 @@ class SearchViewController: UIViewController {
     
     // Массив всех существующих групп
     var groups = [
-        Group(name: "Наука и техника", photoProfile: "scince"),
-        Group(name: "Wylsacom", photoProfile: "wylsa"),
-        Group(name: "MediaZone", photoProfile: "media"),
-        Group(name: "OZON Маркетплэйс", photoProfile: "ozon"),
-        Group(name: "Космос просто", photoProfile: "space"),
-        Group(name: "Apple", photoProfile: "apple"),
-        Group(name: "Google", photoProfile: "google"),
-        Group(name: "Yandex", photoProfile: "yandex"),
-        Group(name: "GeekBrains", photoProfile: "geek"),
-        Group(name: "No name", photoProfile: nil)
+        Group(name: "Наука и техника", photoProfile: "scince", topicGroup: "Наука"),
+        Group(name: "Wylsacom", photoProfile: "wylsa", topicGroup: "IT"),
+        Group(name: "MediaZone", photoProfile: "media", topicGroup: "СМИ"),
+        Group(name: "OZON Маркетплэйс", photoProfile: "ozon", topicGroup: "Торговля"),
+        Group(name: "Космос просто", photoProfile: "space", topicGroup: "Наука"),
+        Group(name: "Apple", photoProfile: "apple", topicGroup: "Компания"),
+        Group(name: "Google", photoProfile: "google", topicGroup: "Компания"),
+        Group(name: "Yandex", photoProfile: "yandex", topicGroup: "Компания"),
+        Group(name: "GeekBrains", photoProfile: "geek", topicGroup: "Образование"),
+        Group(name: "No name", photoProfile: nil, topicGroup: nil)
     ]
     
 
@@ -36,6 +36,8 @@ class SearchViewController: UIViewController {
         
         // Регистрация ячейки
         tableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: searchViewControllerIdentifier)
+        
+        self.tableView.tableFooterView = UIView()
     }
     
 
@@ -60,7 +62,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         
         let group = groups[indexPath.row] // Получаем группу по индексу ячейки
         
-        cell.configurate(name: group.name, imgProfile: UIImage(named: group.photoProfile ?? "default")) // Конфигурируем ячейку
+        cell.configurate(name: group.name, imgProfile: UIImage(named: group.photoProfile ?? "default"), description: group.topicGroup) // Конфигурируем ячейку
         
         return cell
     }

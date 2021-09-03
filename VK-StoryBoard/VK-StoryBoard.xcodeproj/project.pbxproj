@@ -13,6 +13,7 @@
 		BA23017D26DD5CB80084F70F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA23017B26DD5CB80084F70F /* Main.storyboard */; };
 		BA23017F26DD5CC80084F70F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA23017E26DD5CC80084F70F /* Assets.xcassets */; };
 		BA23018226DD5CC80084F70F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA23018026DD5CC80084F70F /* LaunchScreen.storyboard */; };
+		BA9746EA26E158E100823958 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9746E926E158E100823958 /* ProfileViewController.swift */; };
 		BACA4EFF26DD7FBA00E4D795 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACA4EFD26DD7FBA00E4D795 /* TableViewCell.swift */; };
 		BACA4F0026DD7FBA00E4D795 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BACA4EFE26DD7FBA00E4D795 /* TableViewCell.xib */; };
 		BACA4F0526DD86B400E4D795 /* GroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACA4F0426DD86B400E4D795 /* GroupsViewController.swift */; };
@@ -37,6 +38,7 @@
 		BA23017E26DD5CC80084F70F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA23018126DD5CC80084F70F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA23018326DD5CC80084F70F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA9746E926E158E100823958 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		BACA4EFD26DD7FBA00E4D795 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		BACA4EFE26DD7FBA00E4D795 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		BACA4F0426DD86B400E4D795 /* GroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 		BA23017426DD5CB80084F70F /* VK-StoryBoard */ = {
 			isa = PBXGroup;
 			children = (
+				BA9746E826E158A400823958 /* ProfileViewController */,
 				BACA4F1A26DFEAB700E4D795 /* NewsViewController */,
 				BACA4F1226DDA7B600E4D795 /* FriendsViewController */,
 				BACA4F0B26DD912100E4D795 /* Model */,
@@ -98,6 +101,14 @@
 				BACA4F1F26DFED4200E4D795 /* CustomControl.swift */,
 			);
 			path = "VK-StoryBoard";
+			sourceTree = "<group>";
+		};
+		BA9746E826E158A400823958 /* ProfileViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BA9746E926E158E100823958 /* ProfileViewController.swift */,
+			);
+			path = ProfileViewController;
 			sourceTree = "<group>";
 		};
 		BACA4F0126DD861B00E4D795 /* Auth */ = {
@@ -246,6 +257,7 @@
 				BA23017626DD5CB80084F70F /* AppDelegate.swift in Sources */,
 				BACA4F1426DDA7D200E4D795 /* FriendsViewController.swift in Sources */,
 				BA23017826DD5CB80084F70F /* SceneDelegate.swift in Sources */,
+				BA9746EA26E158E100823958 /* ProfileViewController.swift in Sources */,
 				BACA4F0526DD86B400E4D795 /* GroupsViewController.swift in Sources */,
 				BACA4F0D26DD913400E4D795 /* User.swift in Sources */,
 			);
