@@ -10,29 +10,45 @@ import UIKit
 class SearchViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
+    
+    //
+    var searchFlag = false
+    
     
     // Идентификатор контроллера
     var searchViewControllerIdentifier = "searchViewControllerIdentifier"
     
     // Массив всех существующих групп
     var groups = [
-        Group(name: "Наука и техника", photoProfile: "scince", topicGroup: "Наука"),
-        Group(name: "Wylsacom", photoProfile: "wylsa", topicGroup: "IT"),
-        Group(name: "MediaZone", photoProfile: "media", topicGroup: "СМИ"),
-        Group(name: "OZON Маркетплэйс", photoProfile: "ozon", topicGroup: "Торговля"),
-        Group(name: "Космос просто", photoProfile: "space", topicGroup: "Наука"),
-        Group(name: "Apple", photoProfile: "apple", topicGroup: "Компания"),
-        Group(name: "Google", photoProfile: "google", topicGroup: "Компания"),
-        Group(name: "Yandex", photoProfile: "yandex", topicGroup: "Компания"),
-        Group(name: "GeekBrains", photoProfile: "geek", topicGroup: "Образование"),
+        Group(name: "Наука и техника", photoProfile: UIImage(named: "scince"), topicGroup: "Наука"),
+        Group(name: "Wylsacom", photoProfile: UIImage(named: "wylsa"), topicGroup: "IT"),
+        Group(name: "MediaZone", photoProfile: UIImage(named: "media"), topicGroup: "СМИ"),
+        Group(name: "OZON Маркетплэйс", photoProfile: UIImage(named: "ozon"), topicGroup: "Торговля"),
+        Group(name: "Космос просто", photoProfile: UIImage(named: "space"), topicGroup: "Наука"),
+        Group(name: "Apple", photoProfile: UIImage(named: "apple"), topicGroup: "Компания"),
+        Group(name: "Google", photoProfile: UIImage(named: "google"), topicGroup: "Компания"),
+        Group(name: "Yandex", photoProfile: UIImage(named: "yandex"), topicGroup: "Компания"),
+        Group(name: "GeekBrains", photoProfile: UIImage(named: "geek"), topicGroup: "Образование"),
         Group(name: "No name", photoProfile: nil, topicGroup: nil)
     ]
     
+    var filtredGroups = [Group]()
+    
+    func arrayGroups() -> [Group] {
+        if searchFlag {
+            return filtredGroups
+        } else {
+            return groups
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        
+        searchBar.delegate = self
         
         // Регистрация ячейки
         tableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: searchViewControllerIdentifier)
@@ -43,7 +59,9 @@ class SearchViewController: UIViewController {
 
 }
 
-extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
+extension SearchViewController: UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
+    
+// MARK: - TableView Settings
     
     // Количество секций
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -52,7 +70,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     
     // Количество ячеек в секции
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return groups.count
+        return arrayGroups().count
     }
     
     
@@ -60,9 +78,9 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: searchViewControllerIdentifier, for: indexPath) as? TableViewCell
         else { return TableViewCell() } // Создаем ячейку
         
-        let group = groups[indexPath.row] // Получаем группу по индексу ячейки
+        let group = arrayGroups()[indexPath.row] // Получаем группу по индексу ячейкиц
         
-        cell.configurate(name: group.name, imgProfile: UIImage(named: group.photoProfile ?? "default"), description: group.topicGroup) // Конфигурируем ячейку
+        cell.configurate(fullName: group.name, imgProfile: group.photoProfile, description: group.topicGroup) // Конфигурируем ячейку
         
         return cell
     }
@@ -70,5 +88,19 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     // Переход по сеге при нажатии на ячейку
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "addGroup", sender: nil)
+    }
+    
+// MARK: - SearchBar Settingswe
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText.isEmpty {
+            searchFlag = false
+        } else {
+            searchFlag = true
+            filtredGroups = groups.filter({ item in
+                item.name.lowercased().contains(searchText.lowercased())
+            })
+        }
+        tableView.reloadData()
     }
 }

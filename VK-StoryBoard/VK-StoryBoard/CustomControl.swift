@@ -7,9 +7,6 @@
 
 import UIKit
 
-class CustomControl: UIControl {
-
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
+class Control: UIControl {
+    
 }

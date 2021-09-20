@@ -35,7 +35,7 @@ class TableViewCell: UITableViewCell {
     func setup() {
         customView.layer.shadowOffset = shadowOffset // Сдвиг тени относительно Вью
         customView.layer.shadowRadius = shadowRadius // Радиос тени
-        customView.layer.shadowOpacity = Float(opacity) // Прозрачность тени
+        customView.layer.shadowOpacity = Float(opacity) // Прозрачность тени5
     }
     
     // Удаление данных с ячейки
@@ -50,13 +50,13 @@ class TableViewCell: UITableViewCell {
     }
     
     // Конфигурация ячейки
-    func configurate(name: String?, imgProfile: UIImage?, description: String?) {
-        if let profileName = name {
+    func configurate(fullName: String?, imgProfile: UIImage?, description: String?) {
+        if let profileName = fullName {
             nameProfile.text = profileName
         }
          
-        descrip.text = description ?? ""
+        descrip.text = description
         
-        imageProfile.image = imgProfile
+        imageProfile.image = imgProfile ?? UIImage(named: "default")
     }
 }

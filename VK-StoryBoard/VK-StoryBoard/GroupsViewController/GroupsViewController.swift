@@ -52,6 +52,7 @@ class GroupsViewController: UIViewController {
 }
 
 extension GroupsViewController: UITableViewDelegate, UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return groups.count // Количество ячеек в секции
     }
@@ -66,7 +67,7 @@ extension GroupsViewController: UITableViewDelegate, UITableViewDataSource {
         
         let group = groups[indexPath.row] // Получаем группу из индекса ячейки
         
-        cell.configurate(name: group.name, imgProfile: UIImage(named: group.photoProfile ?? "default"), description: group.topicGroup) // Конфигурируем ячейку
+        cell.configurate(fullName: group.name, imgProfile: group.photoProfile, description: group.topicGroup) // Конфигурируем ячейку
         
         return cell
     }
