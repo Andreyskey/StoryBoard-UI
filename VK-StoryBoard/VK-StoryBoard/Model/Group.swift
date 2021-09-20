@@ -8,7 +8,7 @@
 import UIKit
 
 struct Group {
-    var name: String?
-    var photoProfile: String?
+    var name: String
+    var photoProfile: UIImage?
     var topicGroup: String?
 }

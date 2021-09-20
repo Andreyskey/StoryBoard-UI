@@ -23,7 +23,6 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UuW-YA-6z3">
                                 <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="48" id="Bdl-BQ-nu7"/>
                                     <constraint firstAttribute="width" constant="48" id="ZmJ-vd-iwc"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
@@ -38,7 +37,7 @@
                             <constraint firstItem="UuW-YA-6z3" firstAttribute="leading" secondItem="rTN-38-Zms" secondAttribute="leading" id="D1w-Wr-75C"/>
                             <constraint firstAttribute="bottom" secondItem="UuW-YA-6z3" secondAttribute="bottom" id="O1j-9S-dU7"/>
                             <constraint firstItem="UuW-YA-6z3" firstAttribute="top" secondItem="rTN-38-Zms" secondAttribute="top" id="efQ-2z-nI6"/>
-                            <constraint firstAttribute="height" constant="48" id="rCB-Lu-Upx"/>
+                            <constraint firstAttribute="height" constant="48" id="tw0-nW-etC"/>
                             <constraint firstAttribute="width" constant="48" id="wLs-an-xQW"/>
                         </constraints>
                     </view>
