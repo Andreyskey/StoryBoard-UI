@@ -28,6 +28,7 @@ class PhotosViewController: UIViewController {
         // Регситрация ячейки
         collectionView.register(UINib(nibName: "CustomCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: photosViewControllerIdentifier)
         
+        // Показ надписи об отсутсвии фотографий
         if let _ = friend.photo?.count { noPhoto.isHidden = true }
         else { noPhoto.isHidden = false }
     }
@@ -49,7 +50,7 @@ extension PhotosViewController: UICollectionViewDelegate, UICollectionViewDataSo
     // Создание ячейни
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: photosViewControllerIdentifier, for: indexPath) as? CustomCollectionViewCell
-        else { return CustomCollectionViewCell() }
+        else { return UICollectionViewCell() }
     
         cell.configurate(image: UIImage(named: friend.photo?[indexPath.row] ?? "default"))
         

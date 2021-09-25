@@ -10,6 +10,8 @@ import UIKit
 struct Post {
     var group: Group
     var descriptionPost: String?
-    var imagePost: [UIImage]
+    var imagePost: UIImage?
+    var isLiked: Bool
+    var likes: Int
 }
 

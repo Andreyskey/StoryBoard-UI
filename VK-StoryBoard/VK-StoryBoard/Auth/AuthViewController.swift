@@ -13,6 +13,12 @@ class AuthViewController: UIViewController {
     @IBOutlet weak var password: UITextField! // Аутдет пароля
     @IBOutlet weak var scrollView: UIScrollView! // Аутлет ScrollView
     
+    // Вьюхи индиктора загрузки
+    @IBOutlet weak var viewWithIndicatorLoading: UIView!
+    @IBOutlet weak var indicatorFirst: UIView!
+    @IBOutlet weak var indicatorSecond: UIView!
+    @IBOutlet weak var indicatorThird: UIView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +33,32 @@ class AuthViewController: UIViewController {
         
         let hideKeyboardGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
         scrollView?.addGestureRecognizer(hideKeyboardGesture) // Добавляем размер клавиатуры в  констрейнт скроллвью
+        
+        animateIndicatirLoading()
+        viewWithIndicatorLoading.isHidden = true // Прячем изначально
     }
+    
+    func animateIndicatirLoading() {
+        UIView.animate(withDuration: 0.5,
+                       delay: 0, options: [.repeat, .autoreverse],
+                       animations: { [weak self] in
+                        self?.indicatorFirst.layer.opacity = 0
+                       })
+        UIView.animate(withDuration: 0.5,
+                       delay: 0.25,
+                       options: [.repeat, .autoreverse],
+                       animations: { [weak self] in
+                        self?.indicatorSecond.layer.opacity = 0
+                       })
+        UIView.animate(withDuration: 0.5,
+                       delay: 0.5,
+                       options: [.repeat, .autoreverse],
+                       animations: { [weak self] in
+                        self?.indicatorThird.layer.opacity = 0
+                       })
+    }
+    
+    
     
     // Метод проверки пароля и логина
     @IBAction func signIn(_ sender: Any) {
@@ -35,11 +66,13 @@ class AuthViewController: UIViewController {
             login.layer.borderWidth = 0
             password.layer.borderWidth = 0
             performSegue(withIdentifier: "succesLoginAndPassword", sender: nil)
+            viewWithIndicatorLoading.isHidden = false
         } else {
             // Если данные введены не верно, то появляется красная рамка
             login.layer.borderWidth = 1
             password.layer.borderWidth = 1
         }
+        
     }
     
     @IBAction func exit(segue: UIStoryboardSegue) {

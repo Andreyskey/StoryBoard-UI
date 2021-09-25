@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA1691C226FBEABD004045D2 /* DataPosts.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1691C126FBEABD004045D2 /* DataPosts.swift */; };
 		BA23017626DD5CB80084F70F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA23017526DD5CB80084F70F /* AppDelegate.swift */; };
 		BA23017826DD5CB80084F70F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA23017726DD5CB80084F70F /* SceneDelegate.swift */; };
 		BA23017A26DD5CB80084F70F /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA23017926DD5CB80084F70F /* AuthViewController.swift */; };
@@ -32,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BA1691C126FBEABD004045D2 /* DataPosts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPosts.swift; sourceTree = "<group>"; };
 		BA23017226DD5CB80084F70F /* VK-StoryBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VK-StoryBoard.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA23017526DD5CB80084F70F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA23017726DD5CB80084F70F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 				BA9746ED26E1E92200823958 /* NewsTableViewCell.swift */,
 				BACA4F1B26DFEAD000E4D795 /* NewsViewController.swift */,
 				BA9746EE26E1E92200823958 /* NewsTableViewCell.xib */,
+				BA1691C126FBEABD004045D2 /* DataPosts.swift */,
 			);
 			path = NewsViewController;
 			sourceTree = "<group>";
@@ -255,6 +258,7 @@
 				BA23017A26DD5CB80084F70F /* AuthViewController.swift in Sources */,
 				BACA4F1626DDA7DC00E4D795 /* PhotosViewController.swift in Sources */,
 				BA9746EF26E1E92200823958 /* NewsTableViewCell.swift in Sources */,
+				BA1691C226FBEABD004045D2 /* DataPosts.swift in Sources */,
 				BACA4F0926DD8D1200E4D795 /* CustomCollectionViewCell.swift in Sources */,
 				BACA4F1C26DFEAD000E4D795 /* NewsViewController.swift in Sources */,
 				BACA4F2026DFED4200E4D795 /* CustomControl.swift in Sources */,

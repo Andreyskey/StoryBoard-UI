@@ -12,11 +12,7 @@ class FriendsViewController: UIViewController {
     // Идентификатор контроллера
     var friendsViewControllerIdentifier = "friendsViewControllerIdentifier"
     
-    @IBOutlet weak var tableVIew: UITableView! {
-        didSet {
-            self.tableVIew.tableHeaderView?.layer.shadowOpacity = 0.5
-        }
-    }
+    @IBOutlet weak var tableVIew: UITableView!
     
     // Массив с друзьями пользователя
     var friends = [
@@ -59,34 +55,38 @@ class FriendsViewController: UIViewController {
         User(firstName: "Любовь", lastName: "Соболь", photo: nil),
     ]
     
-    func friendsArray() -> [User] {
-        return friends
-    }
     
     func arrayLetter() -> [String] {
+        // Пустой массив букв
         var resultArray = [String]()
         
-        for item in friendsArray() {
+        // Добавляем в массив первые буквы всех фамилий без повторений
+        for item in friends {
             let firstLetter = String(item.lastName.prefix(1))
             if !resultArray.contains(firstLetter) {
                 resultArray.append(firstLetter)
             }
         }
         
+        // Сортируем по алфавиту
         let sortedResultArray = resultArray.sorted() {$0 < $1}
         
         return sortedResultArray
     }
     
     func arrayByLetter(letter: String) -> [User] {
+        
+        // Создаем массив друзей с одинаковой первой буквой фамилии
         var resultArray = [User]()
         
-        for item in friendsArray() {
+        // Добавляем в массив
+        for item in friends {
             let firstLetter = String(item.lastName.prefix(1))
             if firstLetter == letter {
                 resultArray.append(item)
             }
         }
+        
         return resultArray
     }
     
@@ -95,6 +95,7 @@ class FriendsViewController: UIViewController {
         tableVIew.dataSource = self
         tableVIew.delegate = self
         
+        // Убираем полосы у пустых ячеек
         self.tableVIew.tableFooterView = UIView()
         
         // Регистрация ячейки
@@ -118,7 +119,7 @@ extension FriendsViewController: UITableViewDelegate, UITableViewDataSource {
     // Создание ячейки
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: friendsViewControllerIdentifier, for: indexPath) as? TableViewCell
-        else { return TableViewCell() }
+        else { return UITableViewCell() }
         
         let friend = arrayByLetter(letter: arrayLetter()[indexPath.section])
         
