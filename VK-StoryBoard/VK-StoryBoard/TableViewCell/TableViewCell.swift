@@ -28,7 +28,44 @@ class TableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         setup()
+        recognizerImageView()
         clearCell()
+    }
+    
+    // Наблюдаетль нажатий
+    func recognizerImageView() {
+        let recognizer = UITapGestureRecognizer(target: self, action: #selector(animateImageProfile))
+        recognizer.numberOfTouchesRequired = 1
+        recognizer.numberOfTapsRequired = 1
+        customView.addGestureRecognizer(recognizer)
+    }
+    
+    // Objective-C функция для наблюдателя
+    @objc func animateImageProfile() {
+        var bounds = self.imageProfile.bounds
+        bounds.size.width = 44 // Меняем высоту
+        bounds.size.height = 44 // Меняем ширину
+        
+        // Запуск анимации
+        UIView.animate(withDuration: 0.25, // Время анимации
+                       delay: 0, // Задержка
+                       animations: { [weak self] in // Сами анимации
+                        self?.imageProfile.layer.bounds = bounds // Добавляем в анимацию
+                        self?.imageProfile.layer.cornerRadius = 22 // Подстравиваем радиус
+                       },
+                       completion: { _ in
+                        // Анимация с пружинным эффектом
+                        UIView.animate(withDuration: 3, // Время анимации
+                                       delay: 0, // Задержка
+                                       usingSpringWithDamping: 0.1, // Сила пружины
+                                       initialSpringVelocity: 0,
+                                       options: [], // Опции анмиации
+                                       animations: { [weak self] in
+                                        self?.imageProfile.layer.bounds = CGRect(x: 0, y: 0, width: 48, height: 48) // Возвращаем стандартные значения
+                                        self?.imageProfile.layer.cornerRadius  = 24 // Подстраиваем радиус
+                                       } )
+                        
+                       })
     }
     
     // Предустановки ячейки

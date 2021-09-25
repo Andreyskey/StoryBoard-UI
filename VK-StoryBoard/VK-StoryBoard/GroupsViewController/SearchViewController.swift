@@ -76,7 +76,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource, UISe
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: searchViewControllerIdentifier, for: indexPath) as? TableViewCell
-        else { return TableViewCell() } // Создаем ячейку
+        else { return UITableViewCell() } // Создаем ячейку
         
         let group = arrayGroups()[indexPath.row] // Получаем группу по индексу ячейкиц
         

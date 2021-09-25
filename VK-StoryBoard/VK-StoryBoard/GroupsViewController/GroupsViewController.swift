@@ -63,7 +63,7 @@ extension GroupsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: groupsViewControllerIdentifier, for: indexPath) as? TableViewCell
-        else { return TableViewCell() } // Создаем ячейку
+        else { return UITableViewCell() } // Создаем ячейку
         
         let group = groups[indexPath.row] // Получаем группу из индекса ячейки
         

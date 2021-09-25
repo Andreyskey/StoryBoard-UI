@@ -21,10 +21,7 @@ class NewsTableViewCell: UITableViewCell {
     @IBOutlet weak var likeView: UIView! // Вью для считывания нажатия
     @IBOutlet weak var heartImg: UIImageView! // Картинка сердечка
     @IBOutlet weak var likesCount: UILabel! // Количесво лайков
-        
     
-    var isLiked = false // Состояние лайка
-    var likes = 0 // Количество
     
     func recognizerView() { // Наблюдатель нажатий
         let recognizer = UITapGestureRecognizer(target: self, action: #selector(addLike)) // создание наблюдателя
@@ -33,44 +30,77 @@ class NewsTableViewCell: UITableViewCell {
         likeView.addGestureRecognizer(recognizer) // Добавлять наблюдатель на вью
     }
     
+    var indexPathRow: Int?
+    
+    // Функция нажатия лайка
     @objc func addLike() {
-        if !isLiked {
-            likes += 1 // Добавляем один лайк
-            heartImg.image = UIImage(systemName: "heart.fill") // Меняем лайк на заполненное сердечко
-            heartImg.tintColor = .red // Меняем цвет на красный
-            likesCount.text = String(likes) // Изменяем количество лайков для отображения
-            isLiked = true // Меняем позицию лайка
+        
+        guard let indexPathRowCell = indexPathRow else { return }
+        
+        if !posts[indexPathRowCell].isLiked {
+            posts[indexPathRowCell].likes += 1 // Добавляем лайк
+            likesCount.text = String(posts[indexPathRowCell].likes) // Добавляем в Label
+            posts[indexPathRowCell].isLiked = true
+            
+            // Меняем лайк на заполненное сердечко с анимацией
+            UIView.transition(with: heartImg,
+                              duration: 0.5,
+                              options: .transitionCrossDissolve,
+                              animations: { [weak self] in
+                                self?.heartImg.image = UIImage(systemName: "heart.fill") // Заполненное сердечко
+                                self?.heartImg.tintColor = .red  // Меняем цвет на красный
+                              })
         } else {
-            likes -= 1 // Убираем один лайк
-            heartImg.image = UIImage(systemName: "heart") // Меняем обратно на пустое сердечко
-            heartImg.tintColor = .systemGray2 // Меняем на цвет не активного лайка
-            likesCount.text = String(likes) // Изменяем текст о количестве лайков
-            isLiked = false // Меня позицию на не активированый лайк
+            posts[indexPathRowCell].likes -= 1 // Добавляем лайк
+            likesCount.text = String(posts[indexPathRowCell].likes) // Добавляем в Label
+            posts[indexPathRowCell].isLiked = false
+            
+            // Меняем обратно на пустое сердечко с анимацией
+            UIView.transition(with: heartImg,
+                              duration: 0.5,
+                              options: .transitionCrossDissolve,
+                              animations: { [weak self] in
+                                self?.heartImg.image = UIImage(systemName: "heart") // Пустое сердечко
+                                self?.heartImg.tintColor = .systemGray2 // Меняем на цвет не активного лайка
+                              })
         }
     }
     
+    // Предустанока настроек ячейки
     func setup() {
+        
+        guard let indexPathRowCell = indexPathRow else { return } // Проверка есть ли индекс ячейки
+        
+        if posts[indexPathRowCell].isLiked {
+            heartImg.image = UIImage(systemName: "heart.fill")
+            heartImg.tintColor = .red
+        }
     }
     
+    // Очистка ячейки полностью
     func clearCell() {
         photoGroup.image = nil
         nameGroup.text = nil
         descriptionPost.text = nil
         oneImageView.image = nil
+        heartImg.image = UIImage(systemName: "heart")
+        heartImg.tintColor = .systemGray2
     }
     
-    func configurate(post: Post?) {
+    func configurate(post: Post?, indexPath: Int) {
         
+        // Проверяем наличие поста
         guard let post = post else { return }
         
-        photoGroup.image = post.group.photoProfile
-        nameGroup.text = post.group.name
-        descriptionPost.text = post.descriptionPost
-        if post.imagePost.count > 0 {
-            oneImageView.image = post.imagePost[0]
-        } else {
-            oneImageView.image = nil
-        }
+        photoGroup.image = post.group.photoProfile // Устанавливаем фото группы
+        nameGroup.text = post.group.name // Устанавливаем название группы
+        descriptionPost.text = post.descriptionPost // Описание поста
+        oneImageView.image = post.imagePost // Фото поста
+        likesCount.text = String(post.likes) // Предустановка лайков
+        
+        indexPathRow = indexPath // Индекс ячейки
+        
+        setup()
     }
     
     override func prepareForReuse() {
