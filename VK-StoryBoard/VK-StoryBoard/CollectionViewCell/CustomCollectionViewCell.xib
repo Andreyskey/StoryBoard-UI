@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -21,23 +22,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xGq-gf-0Qg">
-                        <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
+                        <rect key="frame" x="0.0" y="80" width="45" height="45"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="SMa-Tq-zoX">
-                                <rect key="frame" x="8" y="98.5" width="20" height="17.5"/>
+                                <rect key="frame" x="8" y="18.5" width="20" height="17.5"/>
                                 <color key="tintColor" systemColor="systemGray2Color"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="66o-Ry-ZXL">
-                                <rect key="frame" x="30" y="96" width="11" height="21"/>
+                                <rect key="frame" x="30" y="16" width="11" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" systemColor="systemGray2Color"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="SMa-Tq-zoX" firstAttribute="top" secondItem="xGq-gf-0Qg" secondAttribute="top" constant="97" id="03D-Be-WCu"/>
                             <constraint firstItem="SMa-Tq-zoX" firstAttribute="leading" secondItem="xGq-gf-0Qg" secondAttribute="leading" constant="8" id="ZSj-Hf-SHh"/>
-                            <constraint firstAttribute="trailing" secondItem="SMa-Tq-zoX" secondAttribute="trailing" constant="97" id="hs1-RL-dpf"/>
                             <constraint firstItem="66o-Ry-ZXL" firstAttribute="leading" secondItem="SMa-Tq-zoX" secondAttribute="trailing" constant="2" id="jAi-UK-LQv"/>
                             <constraint firstAttribute="bottom" secondItem="66o-Ry-ZXL" secondAttribute="bottom" constant="8" id="mGl-qn-dko"/>
                             <constraint firstAttribute="bottom" secondItem="SMa-Tq-zoX" secondAttribute="bottom" constant="8" id="mkI-Ox-rA9"/>
@@ -52,9 +51,9 @@
                 <constraint firstAttribute="bottom" secondItem="qKG-c9-rSE" secondAttribute="bottom" id="SQ6-aW-ndm"/>
                 <constraint firstItem="xGq-gf-0Qg" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="VT6-ez-7gY"/>
                 <constraint firstAttribute="trailing" secondItem="qKG-c9-rSE" secondAttribute="trailing" id="W1W-Ph-Vc6"/>
-                <constraint firstAttribute="trailing" secondItem="xGq-gf-0Qg" secondAttribute="trailing" id="Z5R-Ro-fOQ"/>
+                <constraint firstAttribute="trailing" secondItem="xGq-gf-0Qg" secondAttribute="trailing" constant="80" id="Z5R-Ro-fOQ"/>
                 <constraint firstAttribute="bottom" secondItem="xGq-gf-0Qg" secondAttribute="bottom" id="iWd-lt-FrQ"/>
-                <constraint firstItem="xGq-gf-0Qg" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="zV2-Uh-bMK"/>
+                <constraint firstItem="xGq-gf-0Qg" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="80" id="zV2-Uh-bMK"/>
             </constraints>
             <connections>
                 <outlet property="heartImg" destination="SMa-Tq-zoX" id="ToM-ZG-zbW"/>

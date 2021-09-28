@@ -9,10 +9,11 @@ import UIKit
 
 class PhotosViewController: UIViewController {
 
-    @IBOutlet weak var collectionView: UICollectionView!
+//    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var galleryView: AnimatePhotoFriends!
     
     // Надпись об отсутствии фотографий
-    @IBOutlet weak var noPhoto: UILabel!
+//    @IBOutlet weak var noPhoto: UILabel!
     
     // Идентификатор контроллера
     var photosViewControllerIdentifier = "photosViewControllerIdentifier"
@@ -22,40 +23,41 @@ class PhotosViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView.delegate = self
-        collectionView.dataSource = self
+        galleryView.setImages(images: friend.photo)
+//        collectionView.delegate = self
+//        collectionView.dataSource = self
         
         // Регситрация ячейки
-        collectionView.register(UINib(nibName: "CustomCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: photosViewControllerIdentifier)
+//        collectionView.register(UINib(nibName: "CustomCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: photosViewControllerIdentifier)
         
         // Показ надписи об отсутсвии фотографий
-        if let _ = friend.photo?.count { noPhoto.isHidden = true }
-        else { noPhoto.isHidden = false }
+//        if let _ = friend.photo?.count { noPhoto.isHidden = true }
+//        else { noPhoto.isHidden = false }
     }
     
 }
 
-extension PhotosViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-    
-    // Количество секций
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
-    
-    // Количество ячеек
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return friend.photo?.count ?? 0
-    }
-    
-    // Создание ячейни
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: photosViewControllerIdentifier, for: indexPath) as? CustomCollectionViewCell
-        else { return UICollectionViewCell() }
-    
-        cell.configurate(image: UIImage(named: friend.photo?[indexPath.row] ?? "default"))
-        
-        cell.sizeThatFits(CGSize(width: 125, height: 125))
-        
-        return cell
-    }
-}
+//extension PhotosViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+//
+//    // Количество секций
+//    func numberOfSections(in collectionView: UICollectionView) -> Int {
+//        return 1
+//    }
+//
+//    // Количество ячеек
+//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//        return friend.photo?.count ?? 0
+//    }
+//
+//    // Создание ячейни
+//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: photosViewControllerIdentifier, for: indexPath) as? CustomCollectionViewCell
+//        else { return UICollectionViewCell() }
+//
+//        cell.configurate(image: UIImage(named: friend.photo?[indexPath.row] ?? "default"))
+//
+//        cell.sizeThatFits(CGSize(width: 125, height: 125))
+//
+//        return cell
+//    }
+//}

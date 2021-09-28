@@ -14,6 +14,8 @@
 		BA23017D26DD5CB80084F70F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA23017B26DD5CB80084F70F /* Main.storyboard */; };
 		BA23017F26DD5CC80084F70F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA23017E26DD5CC80084F70F /* Assets.xcassets */; };
 		BA23018226DD5CC80084F70F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA23018026DD5CC80084F70F /* LaunchScreen.storyboard */; };
+		BA42671D2702783700669190 /* AnimatePhotoFriends.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA42671C2702783700669190 /* AnimatePhotoFriends.swift */; };
+		BA42671F2702786900669190 /* AnimatePhotoFrinds.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA42671E2702786900669190 /* AnimatePhotoFrinds.xib */; };
 		BA9746EA26E158E100823958 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9746E926E158E100823958 /* ProfileViewController.swift */; };
 		BA9746EF26E1E92200823958 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9746ED26E1E92200823958 /* NewsTableViewCell.swift */; };
 		BA9746F026E1E92200823958 /* NewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA9746EE26E1E92200823958 /* NewsTableViewCell.xib */; };
@@ -42,6 +44,8 @@
 		BA23017E26DD5CC80084F70F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA23018126DD5CC80084F70F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA23018326DD5CC80084F70F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA42671C2702783700669190 /* AnimatePhotoFriends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatePhotoFriends.swift; sourceTree = "<group>"; };
+		BA42671E2702786900669190 /* AnimatePhotoFrinds.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnimatePhotoFrinds.xib; sourceTree = "<group>"; };
 		BA9746E926E158E100823958 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		BA9746ED26E1E92200823958 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		BA9746EE26E1E92200823958 /* NewsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsTableViewCell.xib; sourceTree = "<group>"; };
@@ -167,6 +171,8 @@
 			children = (
 				BACA4F1326DDA7D200E4D795 /* FriendsViewController.swift */,
 				BACA4F1526DDA7DC00E4D795 /* PhotosViewController.swift */,
+				BA42671C2702783700669190 /* AnimatePhotoFriends.swift */,
+				BA42671E2702786900669190 /* AnimatePhotoFrinds.xib */,
 			);
 			path = FriendsViewController;
 			sourceTree = "<group>";
@@ -244,6 +250,7 @@
 				BA23017F26DD5CC80084F70F /* Assets.xcassets in Resources */,
 				BACA4F0A26DD8D1200E4D795 /* CustomCollectionViewCell.xib in Resources */,
 				BA9746F026E1E92200823958 /* NewsTableViewCell.xib in Resources */,
+				BA42671F2702786900669190 /* AnimatePhotoFrinds.xib in Resources */,
 				BA23017D26DD5CB80084F70F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,6 +278,7 @@
 				BA23017826DD5CB80084F70F /* SceneDelegate.swift in Sources */,
 				BA9746EA26E158E100823958 /* ProfileViewController.swift in Sources */,
 				BACA4F0526DD86B400E4D795 /* GroupsViewController.swift in Sources */,
+				BA42671D2702783700669190 /* AnimatePhotoFriends.swift in Sources */,
 				BACA4F0D26DD913400E4D795 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
