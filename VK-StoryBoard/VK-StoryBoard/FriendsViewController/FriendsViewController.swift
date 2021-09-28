@@ -17,42 +17,42 @@ class FriendsViewController: UIViewController {
     // Массив с друзьями пользователя
     var friends = [
         User(firstName: "Tim", lastName: "Cook", photo: [
-            "tim1",
-            "tim2",
-            "tim3",
-            "tim4"
+            UIImage(named: "tim1")!,
+            UIImage(named: "tim2")!,
+            UIImage(named: "tim3")!,
+            UIImage(named: "tim4")!
         ], isFrom: "USA, Cupertino"),
         User(firstName: "Steve", lastName: "Jobs", photo: [
-            "steve",
-            "steve2",
-            "steve3",
-            "steve4"
+            UIImage(named: "steve")!,
+            UIImage(named: "steve2")!,
+            UIImage(named: "steve3")!,
+            UIImage(named: "steve4")!
         ], isFrom: "USA, California"),
         User(firstName: "Pavel", lastName: "Durov", photo: [
-            "pavel",
-            "pavel2",
-            "pavel3",
-            "pavel4"
+            UIImage(named: "pavel")!,
+            UIImage(named: "pavel2")!,
+            UIImage(named: "pavel3")!,
+            UIImage(named: "pavel4")!
         ], isFrom: "Russia, St. Petersburg"),
         User(firstName: "Donald", lastName: "Trump", photo: [
-            "trump",
-            "trump2",
-            "trump3",
-            "trump4"
+            UIImage(named: "trump")!,
+            UIImage(named: "trump2")!,
+            UIImage(named: "trump3")!,
+            UIImage(named: "trump4")!
         ], isFrom: "USA, Washington"),
-        User(firstName: "Anonim", lastName: "Anon", photo: nil),
-        User(firstName: "Kate", lastName: "Clapp", photo: nil),
-        User(firstName: "Katy", lastName: "Parry", photo: nil),
-        User(firstName: "Billy", lastName: "Eilish", photo: nil),
-        User(firstName: "Даша", lastName: "Копарина", photo: nil),
-        User(firstName: "Андрей", lastName: "Волков", photo: nil),
-        User(firstName: "Дима", lastName: "Валуев", photo: nil),
-        User(firstName: "Тима", lastName: "Беларусских", photo: nil),
-        User(firstName: "Екатерина", lastName: "Храбрых", photo: nil),
-        User(firstName: "Арина", lastName: "Лебедева", photo: nil),
-        User(firstName: "Steve", lastName: "Voznayk", photo: nil),
-        User(firstName: "Mark", lastName: "Redmer", photo: nil),
-        User(firstName: "Любовь", lastName: "Соболь", photo: nil),
+        User(firstName: "Anonim", lastName: "Anon", photo: []),
+        User(firstName: "Kate", lastName: "Clapp", photo: []),
+        User(firstName: "Katy", lastName: "Parry", photo: []),
+        User(firstName: "Billy", lastName: "Eilish", photo: []),
+        User(firstName: "Даша", lastName: "Копарина", photo: []),
+        User(firstName: "Андрей", lastName: "Волков", photo: []),
+        User(firstName: "Дима", lastName: "Валуев", photo: []),
+        User(firstName: "Тима", lastName: "Беларусских", photo: []),
+        User(firstName: "Екатерина", lastName: "Храбрых", photo: []),
+        User(firstName: "Арина", lastName: "Лебедева", photo: []),
+        User(firstName: "Steve", lastName: "Voznayk", photo: []),
+        User(firstName: "Mark", lastName: "Redmer", photo: []),
+        User(firstName: "Любовь", lastName: "Соболь", photo: []),
     ]
     
     
@@ -98,6 +98,7 @@ class FriendsViewController: UIViewController {
         // Убираем полосы у пустых ячеек
         self.tableVIew.tableFooterView = UIView()
         
+        
         // Регистрация ячейки
         tableVIew.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: friendsViewControllerIdentifier)
     }
@@ -124,8 +125,15 @@ extension FriendsViewController: UITableViewDelegate, UITableViewDataSource {
         let friend = arrayByLetter(letter: arrayLetter()[indexPath.section])
         
         let name = friend[indexPath.row].firstName + " " + friend[indexPath.row].lastName
+        let photo: UIImage
         
-        cell.configurate(fullName: name, imgProfile: UIImage(named: friend[indexPath.row].photo?[0] ?? "default"), description: friend[indexPath.row].isFrom)
+        if friend[indexPath.row].photo.count != 0 {
+            photo = friend[indexPath.row].photo[0]
+        } else {
+            photo = UIImage(named: "default")!
+        }
+        
+        cell.configurate(fullName: name, imgProfile: photo, description: friend[indexPath.row].isFrom)
         
         return cell
     }

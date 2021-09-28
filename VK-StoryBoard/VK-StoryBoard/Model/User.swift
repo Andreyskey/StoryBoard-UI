@@ -10,7 +10,7 @@ import UIKit
 struct User {
     var firstName: String // Имя
     var lastName: String // Фамилия
-    var photo: [String]? // Массив фотографий
+    var photo: [UIImage] // Массив фотографий
     var date: String? // Дата рожденя
     var isFrom: String? // Откуда пользователь
 }
