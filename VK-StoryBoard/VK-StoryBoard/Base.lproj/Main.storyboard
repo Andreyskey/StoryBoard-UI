@@ -390,7 +390,7 @@
         <!--Друзья-->
         <scene sceneID="Cov-9o-LD1">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2pm-MZ-C2I" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2pm-MZ-C2I" customClass="CustomNavigationController" customModule="VK_StoryBoard" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Друзья" image="person.2.fill" catalog="system" id="dCJ-zj-UPq"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Im1-zE-frx">
@@ -409,7 +409,7 @@
         <!--Группы-->
         <scene sceneID="ey3-zC-XOo">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="162-d2-tNS" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="162-d2-tNS" customClass="CustomNavigationController" customModule="VK_StoryBoard" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Группы" image="person.3.fill" catalog="system" id="b7k-qZ-kkK"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="c8B-WP-Cfi">
@@ -503,7 +503,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BSj-JV-yKM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="zQm-BK-LIW" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3377" y="1079"/>
+            <point key="canvasLocation" x="2512" y="1083"/>
         </scene>
         <!--Новости-->
         <scene sceneID="hrw-kL-WZ3">
@@ -541,7 +541,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vrV-PC-Lxf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2513.04347826087" y="1078.7946428571429"/>
+            <point key="canvasLocation" x="1602" y="1084"/>
         </scene>
     </scenes>
     <resources>
