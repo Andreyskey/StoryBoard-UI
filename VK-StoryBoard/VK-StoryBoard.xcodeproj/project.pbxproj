@@ -16,9 +16,13 @@
 		BA23018226DD5CC80084F70F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA23018026DD5CC80084F70F /* LaunchScreen.storyboard */; };
 		BA42671D2702783700669190 /* AnimatePhotoFriends.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA42671C2702783700669190 /* AnimatePhotoFriends.swift */; };
 		BA42671F2702786900669190 /* AnimatePhotoFrinds.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA42671E2702786900669190 /* AnimatePhotoFrinds.xib */; };
+		BA42672A270B8A9700669190 /* PopAnimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA426729270B8A9700669190 /* PopAnimate.swift */; };
+		BA42672C270B8AA100669190 /* PushAnimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA42672B270B8AA100669190 /* PushAnimate.swift */; };
+		BA42672E270B8ABE00669190 /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA42672D270B8ABE00669190 /* CustomNavigationController.swift */; };
 		BA9746EA26E158E100823958 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9746E926E158E100823958 /* ProfileViewController.swift */; };
 		BA9746EF26E1E92200823958 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9746ED26E1E92200823958 /* NewsTableViewCell.swift */; };
 		BA9746F026E1E92200823958 /* NewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA9746EE26E1E92200823958 /* NewsTableViewCell.xib */; };
+		BA9CA1AC2717743800212522 /* CustomInteractiveTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9CA1AB2717743800212522 /* CustomInteractiveTransition.swift */; };
 		BACA4EFF26DD7FBA00E4D795 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACA4EFD26DD7FBA00E4D795 /* TableViewCell.swift */; };
 		BACA4F0026DD7FBA00E4D795 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BACA4EFE26DD7FBA00E4D795 /* TableViewCell.xib */; };
 		BACA4F0526DD86B400E4D795 /* GroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACA4F0426DD86B400E4D795 /* GroupsViewController.swift */; };
@@ -31,7 +35,6 @@
 		BACA4F1626DDA7DC00E4D795 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACA4F1526DDA7DC00E4D795 /* PhotosViewController.swift */; };
 		BACA4F1C26DFEAD000E4D795 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACA4F1B26DFEAD000E4D795 /* NewsViewController.swift */; };
 		BACA4F1E26DFEBB000E4D795 /* PostNewsfeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACA4F1D26DFEBB000E4D795 /* PostNewsfeed.swift */; };
-		BACA4F2026DFED4200E4D795 /* CustomControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACA4F1F26DFED4200E4D795 /* CustomControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,9 +49,13 @@
 		BA23018326DD5CC80084F70F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA42671C2702783700669190 /* AnimatePhotoFriends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatePhotoFriends.swift; sourceTree = "<group>"; };
 		BA42671E2702786900669190 /* AnimatePhotoFrinds.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnimatePhotoFrinds.xib; sourceTree = "<group>"; };
+		BA426729270B8A9700669190 /* PopAnimate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopAnimate.swift; sourceTree = "<group>"; };
+		BA42672B270B8AA100669190 /* PushAnimate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushAnimate.swift; sourceTree = "<group>"; };
+		BA42672D270B8ABE00669190 /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
 		BA9746E926E158E100823958 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		BA9746ED26E1E92200823958 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		BA9746EE26E1E92200823958 /* NewsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsTableViewCell.xib; sourceTree = "<group>"; };
+		BA9CA1AB2717743800212522 /* CustomInteractiveTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInteractiveTransition.swift; sourceTree = "<group>"; };
 		BACA4EFD26DD7FBA00E4D795 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		BACA4EFE26DD7FBA00E4D795 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		BACA4F0426DD86B400E4D795 /* GroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsViewController.swift; sourceTree = "<group>"; };
@@ -61,7 +68,6 @@
 		BACA4F1526DDA7DC00E4D795 /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 		BACA4F1B26DFEAD000E4D795 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		BACA4F1D26DFEBB000E4D795 /* PostNewsfeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostNewsfeed.swift; sourceTree = "<group>"; };
-		BACA4F1F26DFED4200E4D795 /* CustomControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +100,7 @@
 		BA23017426DD5CB80084F70F /* VK-StoryBoard */ = {
 			isa = PBXGroup;
 			children = (
+				BA426728270B8A7800669190 /* CustomNavigationController */,
 				BA9746E826E158A400823958 /* ProfileViewController */,
 				BACA4F1A26DFEAB700E4D795 /* NewsViewController */,
 				BACA4F1226DDA7B600E4D795 /* FriendsViewController */,
@@ -108,9 +115,19 @@
 				BA23017E26DD5CC80084F70F /* Assets.xcassets */,
 				BA23018026DD5CC80084F70F /* LaunchScreen.storyboard */,
 				BA23018326DD5CC80084F70F /* Info.plist */,
-				BACA4F1F26DFED4200E4D795 /* CustomControl.swift */,
 			);
 			path = "VK-StoryBoard";
+			sourceTree = "<group>";
+		};
+		BA426728270B8A7800669190 /* CustomNavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				BA426729270B8A9700669190 /* PopAnimate.swift */,
+				BA42672B270B8AA100669190 /* PushAnimate.swift */,
+				BA42672D270B8ABE00669190 /* CustomNavigationController.swift */,
+				BA9CA1AB2717743800212522 /* CustomInteractiveTransition.swift */,
+			);
+			path = CustomNavigationController;
 			sourceTree = "<group>";
 		};
 		BA9746E826E158A400823958 /* ProfileViewController */ = {
@@ -264,11 +281,13 @@
 			files = (
 				BA23017A26DD5CB80084F70F /* AuthViewController.swift in Sources */,
 				BACA4F1626DDA7DC00E4D795 /* PhotosViewController.swift in Sources */,
+				BA9CA1AC2717743800212522 /* CustomInteractiveTransition.swift in Sources */,
 				BA9746EF26E1E92200823958 /* NewsTableViewCell.swift in Sources */,
+				BA42672A270B8A9700669190 /* PopAnimate.swift in Sources */,
 				BA1691C226FBEABD004045D2 /* DataPosts.swift in Sources */,
 				BACA4F0926DD8D1200E4D795 /* CustomCollectionViewCell.swift in Sources */,
 				BACA4F1C26DFEAD000E4D795 /* NewsViewController.swift in Sources */,
-				BACA4F2026DFED4200E4D795 /* CustomControl.swift in Sources */,
+				BA42672C270B8AA100669190 /* PushAnimate.swift in Sources */,
 				BACA4EFF26DD7FBA00E4D795 /* TableViewCell.swift in Sources */,
 				BACA4F1126DD979E00E4D795 /* SearchViewController.swift in Sources */,
 				BACA4F1E26DFEBB000E4D795 /* PostNewsfeed.swift in Sources */,
@@ -277,6 +296,7 @@
 				BACA4F1426DDA7D200E4D795 /* FriendsViewController.swift in Sources */,
 				BA23017826DD5CB80084F70F /* SceneDelegate.swift in Sources */,
 				BA9746EA26E158E100823958 /* ProfileViewController.swift in Sources */,
+				BA42672E270B8ABE00669190 /* CustomNavigationController.swift in Sources */,
 				BACA4F0526DD86B400E4D795 /* GroupsViewController.swift in Sources */,
 				BA42671D2702783700669190 /* AnimatePhotoFriends.swift in Sources */,
 				BACA4F0D26DD913400E4D795 /* User.swift in Sources */,
